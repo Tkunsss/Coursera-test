@@ -1,1 +1,3 @@
-# Coursera-test
+theme: jekyll-theme-minimal
+title: Courseera-test's homepage
+description: Bookmark this to keep an eye on my project updates!
