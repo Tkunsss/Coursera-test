@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Notes</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
 
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .love-note {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ff6b6b;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #d63031;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="love-note" id="loveNote1">
+      <h1>Memory Note</h1>
+      <p>Hmmm! this is the collection of the picture of us that I have and it just a simple website that store our picture!</p>
+      <button onclick="showLoveNote(2)">Next</button>
+    </div>
+    <div class="love-note" id="loveNote2" style="display: none;">
+      <h1>Memory Note</h1>
+      <a href="https://drive.google.com/drive/folders/15PZDuaU1FaJgbun4PqZzGq268PjziPa0?usp=drive_link">Visit our Memory Note!</a>
+      <p> </p>
+      <button onclick="showLoveNote(3)">Next</button>
+    </div>
+    <div class="love-note" id="loveNote3" style="display: none;">
+      <h1>Memory Note</h1>
+      <p>That's all!!!</p>
+      <button onclick="showLoveNote(1)">Start Over</button>
+    </div>
+  </div>
+
+  <script>
+    function showLoveNote(noteNumber) {
+      document.querySelectorAll('.love-note').forEach(function(note) {
+        note.style.display = 'none';
+      });
+      document.getElementById('loveNote' + noteNumber).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
